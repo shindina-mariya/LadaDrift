@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="дрифт, LADA, дрифт обучение, аренда авто дрифт, подарочный сертификат дрифт, автодром">
+    <link rel="icon" type="image/png" href="assets/images/logo/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <title>Бронирование | LADA Drift</title>
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="index.html" class="header__logo">
+                    <img src="assets/images/logo/logo.svg" alt="LADA Drift" class="header__logo-img">
+                </a>
+                <nav class="header__nav" id="mainNav">
+                    <ul class="header__menu">
+                        <li class="header__menu-item"><a href="index.html" class="header__menu-link ">Главная</a></li>
+                        <li class="header__menu-item"><a href="services.html" class="header__menu-link ">Услуги</a></li>
+                        <li class="header__menu-item"><a href="fleet.html" class="header__menu-link ">Автопарк</a></li>
+                        <li class="header__menu-item"><a href="about.html" class="header__menu-link ">О нас</a></li>
+                        <li class="header__menu-item"><a href="contacts.html" class="header__menu-link ">Контакты</a></li>
+                    </ul>
+                </nav>
+                <div class="header__actions">
+                    <a href="tel:+79001234567" class="header__phone"><i class="fas fa-phone"></i><span>+7 (900) 123-45-67</span></a>
+                    <a href="booking.html" class="btn btn--primary header__btn">Забронировать</a>
+                    <button class="header__burger" id="burgerBtn" aria-label="Открыть меню">
+                        <span class="header__burger-line"></span><span class="header__burger-line"></span><span class="header__burger-line"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-menu__overlay" id="mobileOverlay"></div>
+            <div class="mobile-menu__content">
+                <div class="mobile-menu__header">
+                    <a href="index.html" class="mobile-menu__logo">
+                        <img src="assets/images/logo/logo.svg" alt="LADA Drift">
+                    </a>
+                    <button class="mobile-menu__close" id="closeMenuBtn" aria-label="Закрыть меню"><i class="fas fa-times"></i></button>
+                </div>
+                <nav class="mobile-menu__nav">
+                    <ul class="mobile-menu__list">
+                        <li><a href="index.html" class="">Главная</a></li>
+                        <li><a href="services.html" class="">Услуги</a></li>
+                        <li><a href="fleet.html" class="">Автопарк</a></li>
+                        <li><a href="about.html" class="">О нас</a></li>
+                        <li><a href="contacts.html" class="">Контакты</a></li>
+                    </ul>
+                </nav>
+                <div class="mobile-menu__footer">
+                    <a href="tel:+79001234567" class="mobile-menu__phone"><i class="fas fa-phone"></i>+7 (900) 123-45-67</a>
+                    <a href="booking.html" class="btn btn--primary btn--block">Забронировать</a>
+                    <div class="mobile-menu__social">
+                        <a href="https://t.me/ladadrift" target="_blank" rel="noopener" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+                        <a href="https://vk.com/ladadrift" target="_blank" rel="noopener" aria-label="VK"><i class="fab fa-vk"></i></a>
+                        <a href="https://youtube.com/@ladadrift" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="">
+        <div class="container">
+            <div class="booking-container">
+                <!-- Заголовок -->
+                <div class="booking-header">
+                    <h1 class="booking-header__title">
+                        Забронировать <span>заезд</span>
+                    </h1>
+                    <p class="text-muted">Заполните форму и мы свяжемся с вами для подтверждения</p>
+                </div>
+                
+                <!-- Индикатор шагов -->
+                <div class="booking-steps">
+                    <div class="booking-step active" data-step="1">
+                        <div class="booking-step__number">1</div>
+                        <div class="booking-step__label">Услуга</div>
+                    </div>
+                    <div class="booking-step" data-step="2">
+                        <div class="booking-step__number">2</div>
+                        <div class="booking-step__label">Авто</div>
+                    </div>
+                    <div class="booking-step" data-step="3">
+                        <div class="booking-step__number">3</div>
+                        <div class="booking-step__label">Дата</div>
+                    </div>
+                    <div class="booking-step" data-step="4">
+                        <div class="booking-step__number">4</div>
+                        <div class="booking-step__label">Данные</div>
+                    </div>
+                    <div class="booking-step" data-step="5">
+                        <div class="booking-step__number">5</div>
+                        <div class="booking-step__label">Оплата</div>
+                    </div>
+                </div>
+                
+                <!-- Форма бронирования -->
+                <form id="bookingForm" action="php/process_booking.php" method="POST" novalidate>
+                    <!-- Шаг 1: Выбор услуги -->
+                    <div class="step-content active" data-step="1">
+                        <h2 class="step-title">Выберите услугу</h2>
+                        
+                        <div class="service-options">
+                            <div class="service-option">
+                                <input type="radio" name="service_type" id="srv_car" value="car_rental" checked>
+                                <label for="srv_car">
+                                    <span class="service-option__icon"><i class="fas fa-car"></i></span>
+                                    <span class="service-option__title">Аренда авто</span>
+                                    <span class="service-option__price">от 2 000 ₽</span>
+                                </label>
+                            </div>
+                            <div class="service-option">
+                                <input type="radio" name="service_type" id="srv_track" value="track_rental">
+                                <label for="srv_track">
+                                    <span class="service-option__icon"><i class="fas fa-road"></i></span>
+                                    <span class="service-option__title">Аренда трека</span>
+                                    <span class="service-option__price">от 15 000 ₽/час</span>
+                                </label>
+                            </div>
+                            <div class="service-option">
+                                <input type="radio" name="service_type" id="srv_training" value="training">
+                                <label for="srv_training">
+                                    <span class="service-option__icon"><i class="fas fa-graduation-cap"></i></span>
+                                    <span class="service-option__title">Обучение</span>
+                                    <span class="service-option__price">от 5 000 ₽/час</span>
+                                </label>
+                            </div>
+                            <div class="service-option">
+                                <input type="radio" name="service_type" id="srv_cert" value="certificate">
+                                <label for="srv_cert">
+                                    <span class="service-option__icon"><i class="fas fa-gift"></i></span>
+                                    <span class="service-option__title">Сертификат</span>
+                                    <span class="service-option__price">от 3 000 ₽</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="booking-nav">
+                            <div></div>
+                            <button type="button" class="btn btn--primary" data-next="2">
+                                Далее <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Шаг 2: Выбор автомобиля -->
+                    <div class="step-content" data-step="2">
+                        <h2 class="step-title">Выберите автомобиль</h2>
+                        
+                        <div class="car-options" id="carOptions">
+                            <div class="car-option">
+                                <input type="radio" name="car_id" id="car1" value="1" data-price="2800">
+                                <label for="car1">
+                                    <span class="car-option__image"><img src="assets/images/fleet-card__image.webp" alt="ВАЗ-2105 VFTS"></span>
+                                    <span class="car-option__info"><span class="car-option__name">ВАЗ-2105 VFTS</span><span class="car-option__price">2 800 ₽/час</span></span>
+                                    <span class="car-option__check"><i class="fas fa-check"></i></span>
+                                </label>
+                            </div>
+                            <div class="car-option">
+                                <input type="radio" name="car_id" id="car2" value="2" data-price="2500">
+                                <label for="car2">
+                                    <span class="car-option__image"><img src="assets/images/fleet-card__image.jpg.webp" alt="ВАЗ-2107 Семёрка-Сатана"></span>
+                                    <span class="car-option__info"><span class="car-option__name">ВАЗ-2107 Семёрка-Сатана</span><span class="car-option__price">2 500 ₽/час</span></span>
+                                    <span class="car-option__check"><i class="fas fa-check"></i></span>
+                                </label>
+                            </div>
+                            <div class="car-option">
+                                <input type="radio" name="car_id" id="car3" value="3" data-price="3200">
+                                <label for="car3">
+                                    <span class="car-option__image"><img src="assets/images/fleet-card__image.jpg" alt="LADA Priora"></span>
+                                    <span class="car-option__info"><span class="car-option__name">LADA Priora</span><span class="car-option__price">3 200 ₽/час</span></span>
+                                    <span class="car-option__check"><i class="fas fa-check"></i></span>
+                                </label>
+                            </div>
+                            <div class="car-option">
+                                <input type="radio" name="car_id" id="car4" value="4" data-price="3500">
+                                <label for="car4">
+                                    <span class="car-option__image"><img src="assets/images/car-card__image.jpg" alt="LADA Granta Sport"></span>
+                                    <span class="car-option__info"><span class="car-option__name">LADA Granta Sport</span><span class="car-option__price">3 500 ₽/час</span></span>
+                                    <span class="car-option__check"><i class="fas fa-check"></i></span>
+                                </label>
+                            </div>
+                            <div class="car-option">
+                                <input type="radio" name="car_id" id="car5" value="5" data-price="3800">
+                                <label for="car5">
+                                    <span class="car-option__image"><img src="assets/images/car-card__image4.jpg" alt="LADA Niva Legend"></span>
+                                    <span class="car-option__info"><span class="car-option__name">LADA Niva Legend</span><span class="car-option__price">3 800 ₽/час</span></span>
+                                    <span class="car-option__check"><i class="fas fa-check"></i></span>
+                                </label>
+                            </div>
+                            <div class="car-option">
+                                <input type="radio" name="car_id" id="car6" value="6" data-price="2700">
+                                <label for="car6">
+                                    <span class="car-option__image"><img src="assets/images/car-card__image3.jpg" alt="ВАЗ-2107 Семёрка-Шериф"></span>
+                                    <span class="car-option__info"><span class="car-option__name">ВАЗ-2107 Семёрка-Шериф</span><span class="car-option__price">2 700 ₽/час</span></span>
+                                    <span class="car-option__check"><i class="fas fa-check"></i></span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="booking-nav">
+                            <button type="button" class="btn btn--secondary" data-prev="1">
+                                <i class="fas fa-arrow-left"></i> Назад
+                            </button>
+                            <button type="button" class="btn btn--primary" data-next="3">
+                                Далее <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Шаг 3: Выбор даты и времени -->
+                    <div class="step-content" data-step="3">
+                        <h2 class="step-title">Выберите дату и время</h2>
+                        
+                        <div class="datetime-grid">
+                            <div class="date-picker">
+                                <label class="form-label">Дата</label>
+                                <input type="date" name="booking_date" id="bookingDate" required>
+                            </div>
+                            
+                            <div>
+                                <label class="form-label">Время</label>
+                                <div class="time-slots" id="timeSlots">
+                                    <div class="time-slot" data-time="10:00-11:00">10:00</div>
+                                    <div class="time-slot" data-time="11:00-12:00">11:00</div>
+                                    <div class="time-slot" data-time="12:00-13:00">12:00</div>
+                                    <div class="time-slot" data-time="13:00-14:00">13:00</div>
+                                    <div class="time-slot" data-time="14:00-15:00">14:00</div>
+                                    <div class="time-slot" data-time="15:00-16:00">15:00</div>
+                                    <div class="time-slot" data-time="16:00-17:00">16:00</div>
+                                    <div class="time-slot" data-time="17:00-18:00">17:00</div>
+                                    <div class="time-slot" data-time="18:00-19:00">18:00</div>
+                                    <div class="time-slot" data-time="19:00-20:00">19:00</div>
+                                    <div class="time-slot" data-time="20:00-21:00">20:00</div>
+                                </div>
+                                <input type="hidden" name="time_slot" id="timeSlotInput">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group" style="margin-top: var(--spacing-xl);">
+                            <label class="form-label">Длительность</label>
+                            <select name="duration" class="form-control" id="durationSelect">
+                                <option value="30">30 минут</option>
+                                <option value="60" selected>1 час</option>
+                                <option value="120">2 часа</option>
+                                <option value="180">3 часа</option>
+                            </select>
+                        </div>
+                        
+                        <div class="booking-nav">
+                            <button type="button" class="btn btn--secondary" data-prev="2">
+                                <i class="fas fa-arrow-left"></i> Назад
+                            </button>
+                            <button type="button" class="btn btn--primary" data-next="4">
+                                Далее <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Шаг 4: Данные клиента -->
+                    <div class="step-content" data-step="4">
+                        <h2 class="step-title">Ваши данные</h2>
+                        
+                        <div class="client-form">
+                            <div class="form-group">
+                                <label class="form-label required">Ваше имя</label>
+                                <input type="text" name="client_name" class="form-control" 
+                                       placeholder="Иван Иванов" required minlength="2">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label required">Телефон</label>
+                                <input type="tel" name="phone" class="form-control" 
+                                       placeholder="+7 (___) ___-__-__" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label">Email</label>
+                                <input type="email" name="email" class="form-control" 
+                                       placeholder="email@example.com">
+                            </div>
+                            
+                            <div class="form-group" id="driverLicenseGroup">
+                                <label class="form-label required">Водительское удостоверение</label>
+                                <input type="text" name="driver_license" class="form-control" 
+                                       placeholder="Серия и номер">
+                                <small class="text-muted">Необходимо для аренды автомобиля</small>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label">Комментарий</label>
+                                <textarea name="comment" class="form-control" rows="3" 
+                                          placeholder="Пожелания или вопросы..."></textarea>
+                            </div>
+                            
+                            <div class="form-check">
+                                <input type="checkbox" id="agreeTerms" name="agree_terms" required>
+                                <label class="form-check-label" for="agreeTerms">
+                                    Я согласен с <a href="terms.html" target="_blank">условиями</a> и 
+                                    <a href="privacy.html" target="_blank">политикой конфиденциальности</a>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="booking-nav">
+                            <button type="button" class="btn btn--secondary" data-prev="3">
+                                <i class="fas fa-arrow-left"></i> Назад
+                            </button>
+                            <button type="button" class="btn btn--primary" data-next="5">
+                                Далее <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Шаг 5: Подтверждение и оплата -->
+                    <div class="step-content" data-step="5">
+                        <h2 class="step-title">Подтверждение</h2>
+                        
+                        <div class="booking-summary">
+                            <h3 class="booking-summary__title">Детали бронирования</h3>
+                            
+                            <div class="booking-summary__row">
+                                <span class="booking-summary__label">Услуга:</span>
+                                <span class="booking-summary__value" id="summaryService">-</span>
+                            </div>
+                            
+                            <div class="booking-summary__row" id="summaryCarRow">
+                                <span class="booking-summary__label">Автомобиль:</span>
+                                <span class="booking-summary__value" id="summaryCar">-</span>
+                            </div>
+                            
+                            <div class="booking-summary__row">
+                                <span class="booking-summary__label">Дата:</span>
+                                <span class="booking-summary__value" id="summaryDate">-</span>
+                            </div>
+                            
+                            <div class="booking-summary__row">
+                                <span class="booking-summary__label">Время:</span>
+                                <span class="booking-summary__value" id="summaryTime">-</span>
+                            </div>
+                            
+                            <div class="booking-summary__row">
+                                <span class="booking-summary__label">Длительность:</span>
+                                <span class="booking-summary__value" id="summaryDuration">-</span>
+                            </div>
+                            
+                            <div class="booking-summary__row">
+                                <span class="booking-summary__label">Клиент:</span>
+                                <span class="booking-summary__value" id="summaryClient">-</span>
+                            </div>
+                            
+                            <div class="booking-summary__row">
+                                <span class="booking-summary__label">Телефон:</span>
+                                <span class="booking-summary__value" id="summaryPhone">-</span>
+                            </div>
+                            
+                            <div class="booking-summary__total">
+                                <span>Итого:</span>
+                                <span class="booking-summary__total-price" id="summaryTotal">0 ₽</span>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Промокод</label>
+                            <div style="display: flex; gap: var(--spacing-sm);">
+                                <input type="text" name="promo_code" class="form-control" 
+                                       placeholder="Введите промокод" id="promoCodeInput">
+                                <button type="button" class="btn btn--outline" id="applyPromoBtn">
+                                    Применить
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="booking-nav">
+                            <button type="button" class="btn btn--secondary" data-prev="4">
+                                <i class="fas fa-arrow-left"></i> Назад
+                            </button>
+                            <button type="submit" class="btn btn--cta btn--lg" id="submitBooking">
+                                <i class="fas fa-credit-card"></i> Оплатить
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Успешное бронирование -->
+                    <div class="step-content" data-step="success" style="display: none;">
+                        <div class="booking-success">
+                            <div class="booking-success__icon">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <h2 class="booking-success__title">Бронирование создано!</h2>
+                            <p class="booking-success__text">
+                                Спасибо! Мы свяжемся с вами в ближайшее время для подтверждения.
+                            </p>
+                            <div class="booking-success__id">
+                                Номер заявки: <span id="bookingId">#0000</span>
+                            </div>
+                            <a href="index.html" class="btn btn--primary">
+                                На главную
+                            </a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer__top">
+            <div class="container">
+                <div class="footer__grid">
+                    <div class="footer__col footer__col--about">
+                        <a href="index.html" class="footer__logo">
+                            <img src="assets/images/logo/logo.svg" alt="LADA Drift" width="50" height="50">
+                        </a>
+                        <p class="footer__description">
+                            Профессиональный дрифт на легендарных автомобилях LADA.
+                            Аренда авто, обучение, корпоративные мероприятия и подарочные сертификаты.
+                        </p>
+                        <div class="footer__social">
+                            <a href="https://t.me/ladadrift" target="_blank" rel="noopener" class="footer__social-link" aria-label="Telegram">
+                                <i class="fab fa-telegram"></i>
+                            </a>
+                            <a href="https://vk.com/ladadrift" target="_blank" rel="noopener" class="footer__social-link" aria-label="VK">
+                                <i class="fab fa-vk"></i>
+                            </a>
+                            <a href="https://youtube.com/@ladadrift" target="_blank" rel="noopener" class="footer__social-link" aria-label="YouTube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="https://instagram.com/ladadrift" target="_blank" rel="noopener" class="footer__social-link" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="footer__col">
+                        <h3 class="footer__title">Навигация</h3>
+                        <ul class="footer__menu">
+                            <li><a href="index.html">Главная</a></li>
+                            <li><a href="services.html">Услуги</a></li>
+                            <li><a href="fleet.html">Автопарк</a></li>
+                            <li><a href="about.html">О компании</a></li>
+                            <li><a href="contacts.html">Контакты</a></li>
+                            <li><a href="booking.html">Бронирование</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__col">
+                        <h3 class="footer__title">Услуги</h3>
+                        <ul class="footer__menu">
+                            <li><a href="services.html#car-rental">Аренда авто</a></li>
+                            <li><a href="services.html#track-rental">Аренда трека</a></li>
+                            <li><a href="services.html#training">Обучение дрифту</a></li>
+                            <li><a href="services.html#certificate">Подарочные сертификаты</a></li>
+                            <li><a href="services.html#corporate">Корпоративы</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__col">
+                        <h3 class="footer__title">Контакты</h3>
+                        <ul class="footer__contacts">
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Московская обл., г. Дмитров,<br>ул. Промышленная, 15</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                <a href="tel:+79001234567">+7 (900) 123-45-67</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:info@ladadrift.ru">info@ladadrift.ru</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-clock"></i>
+                                <span>Пн-Вс: 10:00 - 21:00</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__col footer__col--subscribe">
+                        <h3 class="footer__title">Подпишитесь на новости</h3>
+                        <p class="footer__subscribe-text">
+                            Получайте информацию об акциях и специальных предложениях
+                        </p>
+                        <form class="footer__subscribe-form" id="subscribeForm">
+                            <div class="footer__subscribe-input">
+                                <input type="email" name="email" placeholder="Ваш email" required autocomplete="email">
+                                <button type="submit" aria-label="Подписаться">
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </div>
+                            <p class="footer__subscribe-note">
+                                Нажимая кнопку, вы соглашаетесь с
+                                <a href="pages/privacy.html">политикой конфиденциальности</a>
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer__map">
+            <div class="footer__map-container" id="footerMap">
+                <iframe
+                    src="https://yandex.ru/map-widget/v1/?um=constructor%3A2f8e9d3b7c4a5f1e0d9c8b7a6f5e4d3c&amp;source=constructor"
+                    style="width:100%; height:300px; border:none;"
+                    loading="lazy"
+                    title="Карта проезда к LADA Drift"
+                ></iframe>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <div class="container">
+                <div class="footer__bottom-inner">
+                    <p class="footer__copyright">
+                        &copy;  LADA Drift. Все права защищены.
+                    </p>
+                    <div class="footer__links">
+                        <a href="pages/privacy.html">Политика конфиденциальности</a>
+                        <a href="pages/terms.html">Пользовательское соглашение</a>
+                        <a href="pages/oferta.html">Публичная оферта</a>
+                    </div>
+                    <div class="footer__payment">
+                        <span>Принимаем к оплате:</span>
+                        <i class="fab fa-cc-visa" style="font-size: 1.5rem;"></i>
+                        <i class="fab fa-cc-mastercard" style="font-size: 1.5rem;"></i>
+                        <span style="font-size: 0.75rem; background: #4CAF50; padding: 2px 6px; border-radius: 4px;">МИР</span>
+                        <span style="font-size: 0.75rem; background: #1976D2; padding: 2px 6px; border-radius: 4px;">СБП</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-top" id="scrollTopBtn" aria-label="Наверх">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <div class="callback-widget" id="callbackWidget">
+        <button class="callback-widget__btn" id="callbackBtn" aria-label="Заказать звонок">
+            <i class="fas fa-phone-alt"></i>
+        </button>
+        <div class="callback-widget__form" id="callbackForm">
+            <div class="callback-widget__header">
+                <h4>Заказать звонок</h4>
+                <button class="callback-widget__close" id="closeCallbackBtn" aria-label="Закрыть">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <form id="callbackRequestForm">
+                <div class="form-group">
+                    <input type="text" name="name" class="form-control" placeholder="Ваше имя" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" name="phone" class="form-control" placeholder="+7 (___) ___-__-__" required>
+                </div>
+                <button type="submit" class="btn btn--primary btn--block">Перезвоните мне</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal" id="modal">
+        <div class="modal__overlay" id="modalOverlay"></div>
+        <div class="modal__content" id="modalContent">
+            <button class="modal__close" id="modalClose" aria-label="Закрыть">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal__body" id="modalBody"></div>
+        </div>
+    </div>
+
+    <div class="toast-container" id="toastContainer"></div>
+
+    <a href="#" class="cabinet-fab" id="cabinetBtn" aria-label="Личный кабинет" title="Личный кабинет">
+        <i class="fas fa-user-circle"></i>
+    </a>
+
+    <div class="auth-modal" id="authModal">
+        <div class="auth-modal__overlay" id="authModalOverlay"></div>
+        <div class="auth-modal__content">
+            <button class="auth-modal__close" id="authModalClose" aria-label="Закрыть"><i class="fas fa-times"></i></button>
+            <div class="auth-modal__body" id="authModalBody"></div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/auth-modal.js"></script>
+    <script src="js/booking.js"></script>
+    
+    
+    
+    
+</body>
+</html>

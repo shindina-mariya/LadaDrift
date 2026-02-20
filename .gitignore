@@ -1,0 +1,51 @@
+# Зависимости
+node_modules/
+vendor/
+
+# Переменные окружения и конфиденциальные данные
+.env
+.env.local
+.env.*.local
+
+# Конфигурация БД (использовать database.php.example как шаблон)
+php/config/database.php
+
+# Логи
+*.log
+logs/
+
+# Кэш и временные файлы
+cache/
+tmp/
+temp/
+*.tmp
+
+# Системные файлы ОС
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+ehthumbs.db
+
+# IDE и редакторы
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+*~
+
+# Загрузки и пользовательский контент (если есть)
+uploads/*
+!uploads/.gitkeep
+
+# Сборки и артефакты
+dist/
+build/
+*.min.js.map
+
+# Резервные копии БД (не публиковать в репозиторий)
+*.sql.gz
+*.sql.bak
+database/backups/

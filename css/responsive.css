@@ -1,0 +1,676 @@
+/**
+ * LADA Drift - Адаптивные стили
+ * Mobile-first подход
+ * 
+ * Breakpoints:
+ * - xs: < 576px (мобильные телефоны)
+ * - sm: 576px - 767px (большие телефоны)
+ * - md: 768px - 991px (планшеты)
+ * - lg: 992px - 1199px (ноутбуки)
+ * - xl: 1200px - 1399px (десктопы)
+ * - xxl: >= 1400px (большие экраны)
+ */
+
+/* ====================================
+   Очень большие экраны (1400px+)
+   ==================================== */
+@media (min-width: 1400px) {
+    :root {
+        --container-padding: 2rem;
+    }
+    
+    .hero__title {
+        font-size: 5rem;
+    }
+    
+    .hero__stats {
+        gap: var(--spacing-4xl);
+    }
+}
+
+/* ====================================
+   Большие экраны / Десктопы (1200px - 1399px)
+   ==================================== */
+@media (max-width: 1399px) {
+    .footer__grid {
+        grid-template-columns: 1.5fr repeat(2, 1fr) 1.5fr;
+    }
+    
+    .footer__col:nth-child(3) {
+        grid-column: span 2;
+    }
+}
+
+/* ====================================
+   Ноутбуки (992px - 1199px)
+   ==================================== */
+@media (max-width: 1199px) {
+    :root {
+        --header-height: 70px;
+    }
+    
+    /* Сетки */
+    .advantages__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .services__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .fleet__grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    /* Hero */
+    .hero__stats {
+        gap: var(--spacing-2xl);
+    }
+    
+    .hero__stat-number {
+        font-size: 2rem;
+    }
+    
+    /* Timeline */
+    .how-it-works__timeline {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: var(--spacing-xl);
+    }
+    
+    .how-it-works__timeline::before {
+        display: none;
+    }
+    
+    .timeline-step {
+        width: calc(33.333% - var(--spacing-lg));
+    }
+    
+    /* Footer */
+    .footer__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-xl);
+    }
+    
+    .footer__col--about {
+        grid-column: span 2;
+    }
+    
+    .footer__col--subscribe {
+        grid-column: span 2;
+    }
+}
+
+/* ====================================
+   Планшеты (768px - 991px)
+   ==================================== */
+@media (max-width: 991px) {
+    :root {
+        --header-height: 64px;
+        --spacing-4xl: 4rem;
+    }
+    
+    /* Шапка */
+    .header__nav {
+        display: none;
+    }
+    
+    .header__phone span {
+        display: none;
+    }
+    
+    .header__btn {
+        display: none;
+    }
+    
+    .header__burger {
+        display: flex;
+    }
+    
+    /* Hero */
+    .hero__content {
+        padding: var(--spacing-lg);
+    }
+    
+    .hero__title {
+        font-size: clamp(2rem, 7vw, 3.5rem);
+    }
+    
+    .hero__subtitle {
+        font-size: 1.125rem;
+    }
+    
+    .hero__buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .hero__buttons .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .hero__stats {
+        flex-wrap: wrap;
+        gap: var(--spacing-xl);
+    }
+    
+    .hero__stat {
+        width: calc(50% - var(--spacing-md));
+    }
+    
+    /* Сетки */
+    .services__grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    
+    .fleet__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Timeline */
+    .timeline-step {
+        width: calc(50% - var(--spacing-md));
+    }
+    
+    /* Секции */
+    .section-header__title {
+        font-size: clamp(1.75rem, 5vw, 2.5rem);
+    }
+    
+    /* Footer */
+    .footer__grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .footer__col--about {
+        grid-column: auto;
+    }
+    
+    .footer__col--subscribe {
+        grid-column: auto;
+    }
+    
+    .footer__logo {
+        justify-content: center;
+    }
+    
+    .footer__social {
+        justify-content: center;
+    }
+    
+    .footer__contacts li {
+        justify-content: center;
+    }
+    
+    .footer__subscribe-input {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .footer__bottom-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer__links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .footer__payment {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* ====================================
+   Большие телефоны (576px - 767px)
+   ==================================== */
+@media (max-width: 767px) {
+    :root {
+        --spacing-3xl: 3rem;
+        --spacing-4xl: 3rem;
+    }
+    
+    /* Шапка */
+    .header__logo-text {
+        display: none;
+    }
+    
+    /* Hero */
+    .hero {
+        min-height: calc(100vh - var(--header-height));
+    }
+    
+    .hero__badge {
+        font-size: 0.75rem;
+        padding: var(--spacing-xs) var(--spacing-md);
+    }
+    
+    .hero__stats {
+        padding-top: var(--spacing-lg);
+    }
+    
+    .hero__stat-number {
+        font-size: 1.75rem;
+    }
+    
+    .hero__stat-label {
+        font-size: 0.75rem;
+    }
+    
+    .hero__scroll {
+        display: none;
+    }
+    
+    /* Сетки */
+    .advantages__grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .fleet__grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    /* Карточки */
+    .advantage-card {
+        padding: var(--spacing-xl) var(--spacing-lg);
+    }
+    
+    .advantage-card__icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+    
+    /* Timeline */
+    .timeline-step {
+        width: 100%;
+    }
+    
+    /* Reviews slider */
+    .reviews__slider {
+        padding: 0;
+    }
+    
+    .review-card {
+        padding: var(--spacing-lg);
+    }
+    
+    .review-card__text {
+        font-size: 0.875rem;
+    }
+    
+    /* FAQ */
+    .faq-item__header {
+        padding: var(--spacing-md);
+    }
+    
+    .faq-item__question {
+        font-size: 0.875rem;
+    }
+    
+    .faq-item__answer {
+        padding: 0 var(--spacing-md) var(--spacing-md);
+        font-size: 0.875rem;
+    }
+    
+    /* Swiper navigation */
+    .swiper-button-prev,
+    .swiper-button-next {
+        display: none;
+    }
+    
+    /* Модальное окно */
+    .modal__content {
+        margin: var(--spacing-md);
+        max-height: calc(100vh - var(--spacing-xl));
+    }
+    
+    .modal__body {
+        padding: var(--spacing-lg);
+    }
+    
+    /* Callback widget */
+    .callback-widget {
+        bottom: var(--spacing-md);
+        left: var(--spacing-md);
+    }
+    
+    .callback-widget__btn {
+        width: 50px;
+        height: 50px;
+        font-size: 1.25rem;
+    }
+    
+    .callback-widget__form {
+        width: calc(100vw - var(--spacing-xl));
+        left: auto;
+        right: 0;
+    }
+    
+    /* Scroll top */
+    .scroll-top {
+        width: 44px;
+        height: 44px;
+        bottom: var(--spacing-md);
+        right: var(--spacing-md);
+    }
+    
+    /* Mobile menu */
+    .mobile-menu__content {
+        width: 100%;
+    }
+}
+
+/* ====================================
+   Маленькие телефоны (< 576px)
+   ==================================== */
+@media (max-width: 575px) {
+    :root {
+        --container-padding: 1rem;
+        --spacing-2xl: 2rem;
+        --spacing-3xl: 2.5rem;
+    }
+    
+    /* Типографика */
+    html {
+        font-size: 14px;
+    }
+    
+    /* Шапка */
+    .header__actions {
+        gap: var(--spacing-md);
+    }
+    
+    /* Hero */
+    .hero__content {
+        padding: var(--spacing-md);
+    }
+    
+    .hero__title {
+        font-size: 2rem;
+    }
+    
+    .hero__subtitle {
+        font-size: 1rem;
+    }
+    
+    .hero__stat {
+        width: 100%;
+    }
+    
+    /* Кнопки */
+    .btn {
+        padding: var(--spacing-sm) var(--spacing-lg);
+        font-size: 0.8125rem;
+    }
+    
+    .btn--lg {
+        padding: var(--spacing-md) var(--spacing-xl);
+    }
+    
+    /* Карточки услуг */
+    .service-card__image {
+        height: 160px;
+    }
+    
+    /* Карточки автомобилей */
+    .car-card__image {
+        height: 180px;
+    }
+    
+    .car-card__content {
+        padding: var(--spacing-md);
+    }
+    
+    /* Секции */
+    .section {
+        padding: var(--spacing-2xl) 0;
+    }
+    
+    .section-header {
+        margin-bottom: var(--spacing-2xl);
+    }
+    
+    .section-header__label {
+        font-size: 0.75rem;
+    }
+    
+    .section-header__subtitle {
+        font-size: 1rem;
+    }
+    
+    /* Footer */
+    .footer__top {
+        padding: var(--spacing-2xl) 0;
+    }
+    
+    .footer__title {
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .footer__menu li {
+        margin-bottom: var(--spacing-xs);
+    }
+    
+    .footer__contacts li {
+        flex-direction: column;
+        gap: var(--spacing-xs);
+    }
+    
+    .footer__links {
+        gap: var(--spacing-md);
+    }
+    
+    .footer__links a {
+        font-size: 0.75rem;
+    }
+    
+    .footer__payment {
+        font-size: 0.75rem;
+    }
+    
+    .footer__payment img {
+        height: 20px;
+    }
+    
+    /* Toast */
+    .toast-container {
+        left: var(--spacing-md);
+        right: var(--spacing-md);
+    }
+    
+    .toast {
+        width: 100%;
+    }
+}
+
+/* ====================================
+   Ландшафтная ориентация на мобильных
+   ==================================== */
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero {
+        min-height: auto;
+        padding: calc(var(--header-height) + var(--spacing-xl)) 0 var(--spacing-xl);
+    }
+    
+    .hero__stats {
+        display: none;
+    }
+    
+    .hero__scroll {
+        display: none;
+    }
+    
+    .hero__title {
+        font-size: 2rem;
+    }
+    
+    .hero__subtitle {
+        margin-bottom: var(--spacing-lg);
+    }
+}
+
+/* ====================================
+   Высокие экраны (>= 900px высоты)
+   ==================================== */
+@media (min-height: 900px) {
+    .hero {
+        min-height: 100vh;
+    }
+}
+
+/* ====================================
+   Поддержка темной/светлой темы системы
+   ==================================== */
+@media (prefers-color-scheme: light) {
+    /* Оставляем темную тему по умолчанию для автомобильного сайта */
+}
+
+/* ====================================
+   Reduced Motion (для пользователей с вестибулярными нарушениями)
+   ==================================== */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    html {
+        scroll-behavior: auto;
+    }
+    
+    .animate-on-scroll {
+        opacity: 1;
+        transform: none;
+    }
+    
+    .hero__scroll {
+        animation: none;
+    }
+    
+    .hero__badge {
+        animation: none;
+    }
+    
+    
+    .preloader__spinner {
+        animation: none;
+    }
+}
+
+/* ====================================
+   Печать
+   ==================================== */
+@media print {
+    /* Скрываем ненужные элементы */
+    .header,
+    .footer,
+    .scroll-top,
+    .callback-widget,
+    .modal,
+    .preloader,
+    .hero__bg video {
+        display: none !important;
+    }
+    
+    /* Убираем тени и эффекты */
+    * {
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+    
+    /* Черный текст на белом фоне */
+    body {
+        background: white !important;
+        color: black !important;
+    }
+    
+    /* Показываем URL ссылок */
+    a[href]::after {
+        content: " (" attr(href) ")";
+        font-size: 0.8em;
+        color: #666;
+    }
+    
+    /* Разрывы страниц */
+    .section {
+        page-break-inside: avoid;
+    }
+    
+    h1, h2, h3 {
+        page-break-after: avoid;
+    }
+}
+
+/* ====================================
+   Высокий контраст (accessibility)
+   ==================================== */
+@media (prefers-contrast: high) {
+    :root {
+        --color-accent: #FF0000;
+        --color-cta: #FF8C00;
+        --color-text-muted: #CCCCCC;
+        --color-gray: #444444;
+    }
+    
+    .btn {
+        border: 2px solid currentColor;
+    }
+    
+    .form-control {
+        border-width: 3px;
+    }
+}
+
+
+/* ====================================
+   Утилиты для скрытия на разных breakpoints
+   ==================================== */
+
+/* Скрыть на мобильных */
+@media (max-width: 767px) {
+    .hide-mobile {
+        display: none !important;
+    }
+}
+
+/* Показать только на мобильных */
+@media (min-width: 768px) {
+    .show-mobile-only {
+        display: none !important;
+    }
+}
+
+/* Скрыть на планшетах */
+@media (min-width: 768px) and (max-width: 991px) {
+    .hide-tablet {
+        display: none !important;
+    }
+}
+
+/* Скрыть на десктопах */
+@media (min-width: 992px) {
+    .hide-desktop {
+        display: none !important;
+    }
+}
+
+/* Показать только на десктопах */
+@media (max-width: 991px) {
+    .show-desktop-only {
+        display: none !important;
+    }
+}

@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="LADA Drift - Дрифт на автомобилях LADA. Аренда авто для дрифта, обучение, подарочные сертификаты.">
+    <meta name="keywords" content="дрифт, LADA, дрифт обучение, аренда авто дрифт, подарочный сертификат дрифт, автодром">
+    <link rel="icon" type="image/png" href="assets/images/logo/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <title>LADA Drift - Дай боком!</title>
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="index.html" class="header__logo">
+                    <img src="assets/images/logo/logo.svg" alt="LADA Drift" class="header__logo-img">
+                </a>
+                <nav class="header__nav" id="mainNav">
+                    <ul class="header__menu">
+                        <li class="header__menu-item"><a href="index.html" class="header__menu-link active">Главная</a></li>
+                        <li class="header__menu-item"><a href="services.html" class="header__menu-link ">Услуги</a></li>
+                        <li class="header__menu-item"><a href="fleet.html" class="header__menu-link ">Автопарк</a></li>
+                        <li class="header__menu-item"><a href="about.html" class="header__menu-link ">О нас</a></li>
+                        <li class="header__menu-item"><a href="contacts.html" class="header__menu-link ">Контакты</a></li>
+                    </ul>
+                </nav>
+                <div class="header__actions">
+                    <a href="tel:+79001234567" class="header__phone"><i class="fas fa-phone"></i><span>+7 (900) 123-45-67</span></a>
+                    <a href="booking.html" class="btn btn--primary header__btn">Забронировать</a>
+                    <button class="header__burger" id="burgerBtn" aria-label="Открыть меню">
+                        <span class="header__burger-line"></span><span class="header__burger-line"></span><span class="header__burger-line"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-menu__overlay" id="mobileOverlay"></div>
+            <div class="mobile-menu__content">
+                <div class="mobile-menu__header">
+                    <a href="index.html" class="mobile-menu__logo">
+                        <img src="assets/images/logo/logo.svg" alt="LADA Drift">
+                    </a>
+                    <button class="mobile-menu__close" id="closeMenuBtn" aria-label="Закрыть меню"><i class="fas fa-times"></i></button>
+                </div>
+                <nav class="mobile-menu__nav">
+                    <ul class="mobile-menu__list">
+                        <li><a href="index.html" class="">Главная</a></li>
+                        <li><a href="services.html" class="">Услуги</a></li>
+                        <li><a href="fleet.html" class="">Автопарк</a></li>
+                        <li><a href="about.html" class="">О нас</a></li>
+                        <li><a href="contacts.html" class="">Контакты</a></li>
+                    </ul>
+                </nav>
+                <div class="mobile-menu__footer">
+                    <a href="tel:+79001234567" class="mobile-menu__phone"><i class="fas fa-phone"></i>+7 (900) 123-45-67</a>
+                    <a href="booking.html" class="btn btn--primary btn--block">Забронировать</a>
+                    <div class="mobile-menu__social">
+                        <a href="https://t.me/ladadrift" target="_blank" rel="noopener" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+                        <a href="https://vk.com/ladadrift" target="_blank" rel="noopener" aria-label="VK"><i class="fab fa-vk"></i></a>
+                        <a href="https://youtube.com/@ladadrift" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="">
+        <!-- Hero -->
+        <section class="hero" id="hero">
+            <!-- Фоновое видео/изображение -->
+            <div class="hero__bg">
+                <video autoplay muted loop playsinline>
+                    <source src="assets/images/grok-video-8fd6cdbf-6dde-46ff-8c28-c0947c26b3ae-2.mp4" type="video/mp4">
+                </video>
+            </div>
+            
+            <!-- Оверлей -->
+            <div class="hero__overlay"></div>
+            
+            <!-- Контент hero секции -->
+            <div class="hero__content">
+                <!-- Бейдж -->
+                <span class="hero__badge">
+                    <i class="fas fa-fire"></i> Новый сезон 2026
+                </span>
+                
+                <!-- Заголовок -->
+                <h1 class="hero__title animate">
+                    Дай боком!
+                    <span>на LADA</span>
+                </h1>
+                
+                <!-- Подзаголовок -->
+                <p class="hero__subtitle animate animate--delay-100">
+                    Профессиональный дрифт на легендарных отечественных автомобилях. 
+                    Аренда, обучение и незабываемые эмоции!
+                </p>
+                
+                <!-- Кнопки -->
+                <div class="hero__buttons animate animate--delay-200">
+                    <a href="booking.html" class="btn btn--cta btn--lg">
+                        <i class="fas fa-calendar-check"></i>
+                        Забронировать заезд
+                    </a>
+                    <a href="fleet.html" class="btn btn--secondary btn--lg">
+                        <i class="fas fa-car"></i>
+                        Смотреть автопарк
+                    </a>
+                </div>
+                
+                <!-- Статистика -->
+                <div class="hero__stats animate animate--delay-300">
+                    <div class="hero__stat">
+                        <div class="hero__stat-number">5+</div>
+                        <div class="hero__stat-label">Автомобилей</div>
+                    </div>
+                    <div class="hero__stat">
+                        <div class="hero__stat-number">1000+</div>
+                        <div class="hero__stat-label">Довольных клиентов</div>
+                    </div>
+                    <div class="hero__stat">
+                        <div class="hero__stat-number">3</div>
+                        <div class="hero__stat-label">Года опыта</div>
+                    </div>
+                    <div class="hero__stat">
+                        <div class="hero__stat-number">100%</div>
+                        <div class="hero__stat-label">Адреналина</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             СЕКЦИЯ ПРЕИМУЩЕСТВ
+             ============================================ -->
+        <section class="section advantages" id="advantages">
+            <div class="container">
+                <!-- Заголовок секции -->
+                <div class="section-header">
+                    <span class="section-header__label">Почему мы</span>
+                    <h2 class="section-header__title">
+                        Наши <span>преимущества</span>
+                    </h2>
+                    <p class="section-header__subtitle">
+                        Мы создали идеальные условия для безопасного и захватывающего дрифта
+                    </p>
+                </div>
+                
+                <!-- Сетка преимуществ -->
+                <div class="advantages__grid">
+                    <!-- Карточка 1 -->
+                    <div class="advantage-card animate">
+                        <div class="advantage-card__icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 class="advantage-card__title">Безопасность</h3>
+                        <p class="advantage-card__text">
+                            Все автомобили оборудованы каркасом безопасности, 6-точечными ремнями и профессиональными шлемами
+                        </p>
+                    </div>
+                    
+                    <!-- Карточка 2 -->
+                    <div class="advantage-card animate animate--delay-100">
+                        <div class="advantage-card__icon">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <h3 class="advantage-card__title">Опытные инструкторы</h3>
+                        <p class="advantage-card__text">
+                            Наши инструкторы — профессиональные дрифтеры с многолетним опытом соревнований
+                        </p>
+                    </div>
+                    
+                    <!-- Карточка 3 -->
+                    <div class="advantage-card animate animate--delay-200">
+                        <div class="advantage-card__icon">
+                            <i class="fas fa-ruble-sign"></i>
+                        </div>
+                        <h3 class="advantage-card__title">Доступные цены</h3>
+                        <p class="advantage-card__text">
+                            Дрифт на отечественных авто — это не только патриотично, но и выгодно. От 2000₽ за сессию
+                        </p>
+                    </div>
+                    
+                    <!-- Карточка 4 -->
+                    <div class="advantage-card animate animate--delay-300">
+                        <div class="advantage-card__icon">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                        <h3 class="advantage-card__title">Удобная локация</h3>
+                        <p class="advantage-card__text">
+                            Собственный трек в 30 минутах от МКАД. Бесплатная парковка и зона отдыха для гостей
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             СЕКЦИЯ УСЛУГ
+             ============================================ -->
+        <section class="section services" id="services">
+            <div class="container">
+                <!-- Заголовок секции -->
+                <div class="section-header">
+                    <span class="section-header__label">Что мы предлагаем</span>
+                    <h2 class="section-header__title">
+                        Наши <span>услуги</span>
+                    </h2>
+                    <p class="section-header__subtitle">
+                        Выберите подходящий формат: от самостоятельного заезда до корпоративных мероприятий
+                    </p>
+                </div>
+                
+                <!-- Сетка услуг -->
+                <div class="services__grid">
+                    <!-- Услуга 1: Аренда авто -->
+                    <div class="service-card animate">
+                        <div class="service-card__image">
+                            <img src="assets/images/service-card__image-1.jpg" alt="Аренда авто для дрифта" style="width: 600px; height: 400px; object-fit: cover;">
+                            <span class="service-card__icon">
+                                <i class="fas fa-car"></i>
+                            </span>
+                        </div>
+                        <div class="service-card__content">
+                            <h3 class="service-card__title">Аренда авто для дрифта</h3>
+                            <p class="service-card__description">
+                                Выберите автомобиль из нашего автопарка и прокатитесь с ветерком! Идеально для тех, кто хочет почувствовать драйв.
+                            </p>
+                            <div class="service-card__price">
+                                от 2 000 ₽ <span>/ 30 минут</span>
+                            </div>
+                            <a href="services.html#car-rental" class="service-card__link">
+                                Подробнее <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Услуга 2: Аренда трека -->
+                    <div class="service-card animate animate--delay-100">
+                        <div class="service-card__image">
+                            <img src="assets/images/service-card__image-2.jpg" alt="Аренда трека">
+                            <span class="service-card__icon">
+                                <i class="fas fa-road"></i>
+                            </span>
+                        </div>
+                        <div class="service-card__content">
+                            <h3 class="service-card__title">Аренда трека</h3>
+                            <p class="service-card__description">
+                                Закрытая площадка для вашей компании или мероприятия. Организуем дрифт-батлы и соревнования.
+                            </p>
+                            <div class="service-card__price">
+                                от 15 000 ₽ <span>/ час</span>
+                            </div>
+                            <a href="services.html#track-rental" class="service-card__link">
+                                Подробнее <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Услуга 3: Обучение дрифту -->
+                    <div class="service-card animate animate--delay-200">
+                        <div class="service-card__image">
+                            <img src="assets/images/service-card__image-3.jpg" alt="Обучение дрифту">
+                            <span class="service-card__icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </span>
+                        </div>
+                        <div class="service-card__content">
+                            <h3 class="service-card__title">Обучение дрифту</h3>
+                            <p class="service-card__description">
+                                Индивидуальные и групповые занятия с профессиональным инструктором. Научим с нуля!
+                            </p>
+                            <div class="service-card__price">
+                                от 5 000 ₽ <span>/ час</span>
+                            </div>
+                            <a href="services.html#training" class="service-card__link">
+                                Подробнее <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Услуга 4: Подарочные сертификаты -->
+                    <div class="service-card animate animate--delay-300">
+                        <div class="service-card__image">
+                            <img src="assets/images/service-card__image-4.png" alt="Подарочный сертификат">
+                            <span class="service-card__icon">
+                                <i class="fas fa-gift"></i>
+                            </span>
+                        </div>
+                        <div class="service-card__content">
+                            <h3 class="service-card__title">Подарочные сертификаты</h3>
+                            <p class="service-card__description">
+                                Идеальный подарок для любителя скорости и адреналина. Красивое оформление и гибкий номинал.
+                            </p>
+                            <div class="service-card__price">
+                                от 3 000 ₽
+                            </div>
+                            <a href="services.html#certificate" class="service-card__link">
+                                Подробнее <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Услуга 5: Корпоративы -->
+                    <div class="service-card animate animate--delay-400">
+                        <div class="service-card__image">
+                            <img src="assets/images/service-card__image-5.jpg" alt="Корпоративные мероприятия">
+                            <span class="service-card__icon">
+                                <i class="fas fa-users"></i>
+                            </span>
+                        </div>
+                        <div class="service-card__content">
+                            <h3 class="service-card__title">Корпоративы и тимбилдинг</h3>
+                            <p class="service-card__description">
+                                Незабываемые корпоративные мероприятия с элементами дрифта. Сплотите команду через драйв!
+                            </p>
+                            <div class="service-card__price">
+                                от 50 000 ₽ <span>/ мероприятие</span>
+                            </div>
+                            <a href="services.html#corporate" class="service-card__link">
+                                Подробнее <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- CTA карточка -->
+                    <div class="service-card animate animate--delay-500" style="background: var(--gradient-accent);">
+                        <div class="service-card__content" style="height: 100%; display: flex; flex-direction: column; justify-content: center; text-align: center;">
+                            <h3 class="service-card__title" style="font-size: 1.5rem;">Не знаете, что выбрать?</h3>
+                            <p class="service-card__description" style="color: rgba(255,255,255,0.9);">
+                                Позвоните нам, и мы поможем подобрать идеальный вариант для вас!
+                            </p>
+                            <a href="tel:+79001234567" class="btn btn--secondary" style="margin-top: 1rem;">
+                                <i class="fas fa-phone"></i>
+                                Позвонить
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             СЕКЦИЯ АВТОПАРКА
+             ============================================ -->
+        <section class="section fleet" id="fleet">
+            <div class="container">
+                <!-- Заголовок секции -->
+                <div class="section-header">
+                    <span class="section-header__label">Наш автопарк</span>
+                    <h2 class="section-header__title">
+                        Легендарные <span>LADA</span>
+                    </h2>
+                    <p class="section-header__subtitle">
+                        Каждый автомобиль подготовлен для безопасного и эффектного дрифта
+                    </p>
+                </div>
+                
+                <!-- Сетка автомобилей -->
+                <div class="fleet__grid">
+                    <!-- Автомобиль 1 -->
+                    <div class="car-card animate">
+                        <span class="car-card__badge">Хит</span>
+                        <div class="car-card__image">
+                            <img src='assets/images/car-card__image.jpg' alt="LADA Granta Sport">
+                        </div>
+                        <div class="car-card__content">
+                            <h3 class="car-card__title">LADA Granta Sport</h3>
+                            <div class="car-card__specs">
+                                <span><i class="fas fa-tachometer-alt"></i> 118 л.с.</span>
+                                <span><i class="fas fa-cog"></i> МКПП</span>
+                                <span><i class="fas fa-calendar"></i> 2023</span>
+                            </div>
+                            <div class="car-card__price">
+                                <div>
+                                    <span class="car-card__price-value">3 500 ₽</span>
+                                    <span class="car-card__price-label">/ час</span>
+                                </div>
+                                <a href="fleet.html#granta" class="btn btn--outline btn--sm">Выбрать</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Автомобиль 2 -->
+                    <div class="car-card animate animate--delay-100">
+                        <span class="car-card__badge" style="background: var(--color-cta);">Мощный</span>
+                        <div class="car-card__image">
+                            <img src="assets/images/car-card__image2.jpg" alt="LADA Vesta Sport">
+                        </div>
+                        <div class="car-card__content">
+                            <h3 class="car-card__title">LADA Vesta Sport</h3>
+                            <div class="car-card__specs">
+                                <span><i class="fas fa-tachometer-alt"></i> 145 л.с.</span>
+                                <span><i class="fas fa-cog"></i> МКПП</span>
+                                <span><i class="fas fa-calendar"></i> 2023</span>
+                            </div>
+                            <div class="car-card__price">
+                                <div>
+                                    <span class="car-card__price-value">4 500 ₽</span>
+                                    <span class="car-card__price-label">/ час</span>
+                                </div>
+                                <a href="fleet.html#vesta" class="btn btn--outline btn--sm">Выбрать</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Автомобиль 3 -->
+                    <div class="car-card animate animate--delay-200">
+                        <span class="car-card__badge" style="background: var(--color-gray);">Классика</span>
+                        <div class="car-card__image">
+                            <img src="assets/images/car-card__image3.jpg" alt="LADA 2107 Drift">
+                        </div>
+                        <div class="car-card__content">
+                            <h3 class="car-card__title">LADA 2107 Drift</h3>
+                            <div class="car-card__specs">
+                                <span><i class="fas fa-tachometer-alt"></i> 160 л.с.</span>
+                                <span><i class="fas fa-cog"></i> МКПП</span>
+                                <span><i class="fas fa-calendar"></i> 2022</span>
+                            </div>
+                            <div class="car-card__price">
+                                <div>
+                                    <span class="car-card__price-value">4 000 ₽</span>
+                                    <span class="car-card__price-label">/ час</span>
+                                </div>
+                                <a href="fleet.html#2107" class="btn btn--outline btn--sm">Выбрать</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Автомобиль 4 -->
+                    <div class="car-card animate animate--delay-300">
+                        <span class="car-card__badge" style="background: var(--color-success);">Уникальный</span>
+                        <div class="car-card__image">
+                                <img src="assets/images/car-card__image4.jpg" alt="LADA Niva Legend">
+                        </div>
+                        <div class="car-card__content">
+                            <h3 class="car-card__title">LADA Niva Legend</h3>
+                            <div class="car-card__specs">
+                                <span><i class="fas fa-tachometer-alt"></i> 135 л.с.</span>
+                                <span><i class="fas fa-cog"></i> МКПП</span>
+                                <span><i class="fas fa-calendar"></i> 2023</span>
+                            </div>
+                            <div class="car-card__price">
+                                <div>
+                                    <span class="car-card__price-value">5 000 ₽</span>
+                                    <span class="car-card__price-label">/ час</span>
+                                </div>
+                                <a href="fleet.html#niva" class="btn btn--outline btn--sm">Выбрать</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Кнопка "Все автомобили" -->
+                <div style="text-align: center; margin-top: var(--spacing-2xl);">
+                    <a href="fleet.html" class="btn btn--primary btn--lg">
+                        Смотреть весь автопарк
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             СЕКЦИЯ "КАК ЭТО РАБОТАЕТ"
+             ============================================ -->
+        <section class="section how-it-works" id="how-it-works">
+            <div class="container">
+                <!-- Заголовок секции -->
+                <div class="section-header">
+                    <span class="section-header__label">Просто и быстро</span>
+                    <h2 class="section-header__title">
+                        Как <span>забронировать</span>
+                    </h2>
+                    <p class="section-header__subtitle">
+                        Всего 5 простых шагов отделяют вас от незабываемого дрифта
+                    </p>
+                </div>
+                
+                <!-- Таймлайн -->
+                <div class="how-it-works__timeline">
+                    <div class="timeline-step animate">
+                        <div class="timeline-step__number">1</div>
+                        <h3 class="timeline-step__title">Выберите услугу</h3>
+                        <p class="timeline-step__text">Аренда авто, трека или обучение</p>
+                    </div>
+                    
+                    <div class="timeline-step animate animate--delay-100">
+                        <div class="timeline-step__number">2</div>
+                        <h3 class="timeline-step__title">Выберите авто</h3>
+                        <p class="timeline-step__text">Подберите машину под свой уровень</p>
+                    </div>
+                    
+                    <div class="timeline-step animate animate--delay-200">
+                        <div class="timeline-step__number">3</div>
+                        <h3 class="timeline-step__title">Укажите дату</h3>
+                        <p class="timeline-step__text">Выберите удобное время в календаре</p>
+                    </div>
+                    
+                    <div class="timeline-step animate animate--delay-300">
+                        <div class="timeline-step__number">4</div>
+                        <h3 class="timeline-step__title">Оплатите онлайн</h3>
+                        <p class="timeline-step__text">Безопасная оплата картой или СБП</p>
+                    </div>
+                    
+                    <div class="timeline-step animate animate--delay-400">
+                        <div class="timeline-step__number">5</div>
+                        <h3 class="timeline-step__title">Приезжайте!</h3>
+                        <p class="timeline-step__text">Получите инструктаж и наслаждайтесь</p>
+                    </div>
+                </div>
+                
+                <!-- CTA -->
+                <div style="text-align: center; margin-top: var(--spacing-2xl);">
+                    <a href="booking.html" class="btn btn--cta btn--lg">
+                        <i class="fas fa-calendar-check"></i>
+                        Забронировать сейчас
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             СЕКЦИЯ ОТЗЫВОВ
+             ============================================ -->
+        <section class="section reviews" id="reviews">
+            <div class="container">
+                <!-- Заголовок секции -->
+                <div class="section-header">
+                    <span class="section-header__label">Отзывы</span>
+                    <h2 class="section-header__title">
+                        Что говорят <span>клиенты</span>
+                    </h2>
+                    <p class="section-header__subtitle">
+                        Более 1000 довольных клиентов уже испытали драйв с LADA Drift
+                    </p>
+                </div>
+                
+                <!-- Слайдер отзывов -->
+                <div class="reviews__slider">
+                    <div class="swiper reviewsSwiper">
+                        <div class="swiper-wrapper">
+                            <!-- Отзыв 1 -->
+                            <div class="swiper-slide">
+                                <div class="review-card">
+                                    <div class="review-card__avatar">
+                                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face" alt="Алексей М.">
+                                    </div>
+                                    <div class="review-card__rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <p class="review-card__text">
+                                        Невероятные эмоции! Первый раз в жизни дрифтовал и сразу на отечественном авто. Инструктор всё объяснил, машина послушная. Обязательно вернусь!
+                                    </p>
+                                    <p class="review-card__author">Алексей М.</p>
+                                    <p class="review-card__service">Обучение дрифту</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Отзыв 2 -->
+                            <div class="swiper-slide">
+                                <div class="review-card">
+                                    <div class="review-card__avatar">
+                                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face" alt="Дмитрий К.">
+                                    </div>
+                                    <div class="review-card__rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <p class="review-card__text">
+                                        Арендовал Гранту на день рождения друга. Он был в восторге! Организация на высшем уровне, всё чётко и безопасно. Рекомендую всем!
+                                    </p>
+                                    <p class="review-card__author">Дмитрий К.</p>
+                                    <p class="review-card__service">Аренда авто</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Отзыв 3 -->
+                            <div class="swiper-slide">
+                                <div class="review-card">
+                                    <div class="review-card__avatar">
+                                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face" alt="Мария С.">
+                                    </div>
+                                    <div class="review-card__rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <p class="review-card__text">
+                                        Подарила мужу сертификат на дрифт. Лучший подарок за все годы! Теперь он фанат LADA Drift и планирует пройти обучение.
+                                    </p>
+                                    <p class="review-card__author">Мария С.</p>
+                                    <p class="review-card__service">Подарочный сертификат</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Отзыв 4 -->
+                            <div class="swiper-slide">
+                                <div class="review-card">
+                                    <div class="review-card__avatar">
+                                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face" alt="Игорь В.">
+                                    </div>
+                                    <div class="review-card__rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <p class="review-card__text">
+                                        Отличный трек, хорошие машины. Единственное — хотелось бы больше временных слотов в выходные. А так всё супер!
+                                    </p>
+                                    <p class="review-card__author">Игорь В.</p>
+                                    <p class="review-card__service">Аренда трека</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Отзыв 5 -->
+                            <div class="swiper-slide">
+                                <div class="review-card">
+                                    <div class="review-card__avatar">
+                                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face" alt="Анна Л.">
+                                    </div>
+                                    <div class="review-card__rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <p class="review-card__text">
+                                        Корпоратив прошел на ура! Коллеги до сих пор обсуждают. Спасибо за организацию и индивидуальный подход!
+                                    </p>
+                                    <p class="review-card__author">Анна Л.</p>
+                                    <p class="review-card__service">Корпоратив</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Навигация -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                        
+                        <!-- Пагинация -->
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             СЕКЦИЯ FAQ
+             ============================================ -->
+        <section class="section faq" id="faq">
+            <div class="container">
+                <!-- Заголовок секции -->
+                <div class="section-header">
+                    <span class="section-header__label">FAQ</span>
+                    <h2 class="section-header__title">
+                        Частые <span>вопросы</span>
+                    </h2>
+                    <p class="section-header__subtitle">
+                        Ответы на популярные вопросы о дрифте в LADA Drift
+                    </p>
+                </div>
+                
+                <!-- Аккордеон FAQ -->
+                <div class="faq__accordion">
+                    <!-- Вопрос 1 -->
+                    <div class="faq-item active">
+                        <div class="faq-item__header">
+                            <h3 class="faq-item__question">Как проходит дрифт-заезд?</h3>
+                            <span class="faq-item__icon"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-item__content">
+                            <p class="faq-item__answer">
+                                После прибытия на трек вы проходите инструктаж, получаете защитное снаряжение и приступаете к заезду под контролем инструктора.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Вопрос 2 -->
+                    <div class="faq-item">
+                        <div class="faq-item__header">
+                            <h3 class="faq-item__question">Нужно ли иметь опыт вождения автомобиля?</h3>
+                            <span class="faq-item__icon"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-item__content">
+                            <p class="faq-item__answer">
+                                Да, участие возможно только при наличии базового опыта вождения автомобиля. Клиент должен уверенно управлять машиной и понимать основные принципы вождения.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Вопрос 3 -->
+                    <div class="faq-item">
+                        <div class="faq-item__header">
+                            <h3 class="faq-item__question">Нужно ли иметь водительские права категории В?</h3>
+                            <span class="faq-item__icon"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-item__content">
+                            <p class="faq-item__answer">
+                                Да, участие в заездах допускается при наличии водительских прав категории В.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Вопрос 4 -->
+                    <div class="faq-item">
+                        <div class="faq-item__header">
+                            <h3 class="faq-item__question">Нужно ли иметь опыт дрифта?</h3>
+                            <span class="faq-item__icon"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-item__content">
+                            <p class="faq-item__answer">
+                                Нет. Мы обучаем с нуля — инструктор объяснит всё, от основных приёмов до контроля заноса.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Вопрос 5 -->
+                    <div class="faq-item">
+                        <div class="faq-item__header">
+                            <h3 class="faq-item__question">Можно ли подарить заезд другу?</h3>
+                            <span class="faq-item__icon"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-item__content">
+                            <p class="faq-item__answer">
+                                Да, доступны подарочные сертификаты — отличная идея для подарка с эмоциями.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Вопрос 6 -->
+                    <div class="faq-item">
+                        <div class="faq-item__header">
+                            <h3 class="faq-item__question">Что включено в стоимость?</h3>
+                            <span class="faq-item__icon"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-item__content">
+                            <p class="faq-item__answer">
+                                Аренда автомобиля, работа инструктора, топливо и время заезда на треке.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Вопрос 7 -->
+                    <div class="faq-item">
+                        <div class="faq-item__header">
+                            <h3 class="faq-item__question">Что делать, если плохая погода?</h3>
+                            <span class="faq-item__icon"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-item__content">
+                            <p class="faq-item__answer">
+                                В случае дождя или технических ограничений бронирование можно перенести на другую дату без доплат.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Вопрос 8 -->
+                    <div class="faq-item">
+                        <div class="faq-item__header">
+                            <h3 class="faq-item__question">Можно ли снимать на видео?</h3>
+                            <span class="faq-item__icon"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-item__content">
+                            <p class="faq-item__answer">
+                                Да, по желанию предоставляется профессиональная фото- и видеосъёмка, либо можно использовать собственное оборудование.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             CTA СЕКЦИЯ (Призыв к действию)
+             ============================================ -->
+        <section class="section section--accent" style="padding: var(--spacing-3xl) 0;">
+            <div class="container">
+                <div style="text-align: center; max-width: 700px; margin: 0 auto;">
+                    <h2 style="font-size: clamp(1.75rem, 4vw, 2.5rem); font-weight: 800; margin-bottom: var(--spacing-md);">
+                        Готовы испытать настоящий драйв?
+                    </h2>
+                    <p style="font-size: 1.125rem; margin-bottom: var(--spacing-xl); opacity: 0.9;">
+                        Забронируйте свой первый заезд прямо сейчас и получите скидку 10% по промокоду <strong>FIRSTDRIFT</strong>
+                    </p>
+                    <div style="display: flex; justify-content: center; gap: var(--spacing-md); flex-wrap: wrap;">
+                        <a href="booking.html" class="btn btn--secondary btn--lg">
+                            <i class="fas fa-calendar-check"></i>
+                            Забронировать
+                        </a>
+                        <a href="tel:+79001234567" class="btn btn--lg" style="background: rgba(255,255,255,0.2); color: white;">
+                            <i class="fas fa-phone"></i>
+                            Позвонить
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer class="footer">
+        <div class="footer__top">
+            <div class="container">
+                <div class="footer__grid">
+                    <div class="footer__col footer__col--about">
+                        <a href="index.html" class="footer__logo">
+                            <img src="assets/images/logo/logo.svg" alt="LADA Drift" width="50" height="50">
+                        </a>
+                        <p class="footer__description">
+                            Профессиональный дрифт на легендарных автомобилях LADA.
+                            Аренда авто, обучение, корпоративные мероприятия и подарочные сертификаты.
+                        </p>
+                        <div class="footer__social">
+                            <a href="https://t.me/ladadrift" target="_blank" rel="noopener" class="footer__social-link" aria-label="Telegram">
+                                <i class="fab fa-telegram"></i>
+                            </a>
+                            <a href="https://vk.com/ladadrift" target="_blank" rel="noopener" class="footer__social-link" aria-label="VK">
+                                <i class="fab fa-vk"></i>
+                            </a>
+                            <a href="https://youtube.com/@ladadrift" target="_blank" rel="noopener" class="footer__social-link" aria-label="YouTube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="https://instagram.com/ladadrift" target="_blank" rel="noopener" class="footer__social-link" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="footer__col">
+                        <h3 class="footer__title">Навигация</h3>
+                        <ul class="footer__menu">
+                            <li><a href="index.html">Главная</a></li>
+                            <li><a href="services.html">Услуги</a></li>
+                            <li><a href="fleet.html">Автопарк</a></li>
+                            <li><a href="about.html">О компании</a></li>
+                            <li><a href="contacts.html">Контакты</a></li>
+                            <li><a href="booking.html">Бронирование</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__col">
+                        <h3 class="footer__title">Услуги</h3>
+                        <ul class="footer__menu">
+                            <li><a href="services.html#car-rental">Аренда авто</a></li>
+                            <li><a href="services.html#track-rental">Аренда трека</a></li>
+                            <li><a href="services.html#training">Обучение дрифту</a></li>
+                            <li><a href="services.html#certificate">Подарочные сертификаты</a></li>
+                            <li><a href="services.html#corporate">Корпоративы</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__col">
+                        <h3 class="footer__title">Контакты</h3>
+                        <ul class="footer__contacts">
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Московская обл., г. Дмитров,<br>ул. Промышленная, 15</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                <a href="tel:+79001234567">+7 (900) 123-45-67</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:info@ladadrift.ru">info@ladadrift.ru</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-clock"></i>
+                                <span>Пн-Вс: 10:00 - 21:00</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__col footer__col--subscribe">
+                        <h3 class="footer__title">Подпишитесь на новости</h3>
+                        <p class="footer__subscribe-text">
+                            Получайте информацию об акциях и специальных предложениях
+                        </p>
+                        <form class="footer__subscribe-form" id="subscribeForm">
+                            <div class="footer__subscribe-input">
+                                <input type="email" name="email" placeholder="Ваш email" required autocomplete="email">
+                                <button type="submit" aria-label="Подписаться">
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </div>
+                            <p class="footer__subscribe-note">
+                                Нажимая кнопку, вы соглашаетесь с
+                                <a href="pages/privacy.html">политикой конфиденциальности</a>
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer__map">
+            <div class="footer__map-container" id="footerMap">
+                <iframe
+                    src="https://yandex.ru/map-widget/v1/?um=constructor%3A2f8e9d3b7c4a5f1e0d9c8b7a6f5e4d3c&amp;source=constructor"
+                    style="width:100%; height:300px; border:none;"
+                    loading="lazy"
+                    title="Карта проезда к LADA Drift"
+                ></iframe>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <div class="container">
+                <div class="footer__bottom-inner">
+                    <p class="footer__copyright">
+                        &copy;  LADA Drift. Все права защищены.
+                    </p>
+                    <div class="footer__links">
+                        <a href="pages/privacy.html">Политика конфиденциальности</a>
+                        <a href="pages/terms.html">Пользовательское соглашение</a>
+                        <a href="pages/oferta.html">Публичная оферта</a>
+                    </div>
+                    <div class="footer__payment">
+                        <span>Принимаем к оплате:</span>
+                        <i class="fab fa-cc-visa" style="font-size: 1.5rem;"></i>
+                        <i class="fab fa-cc-mastercard" style="font-size: 1.5rem;"></i>
+                        <span style="font-size: 0.75rem; background: #4CAF50; padding: 2px 6px; border-radius: 4px;">МИР</span>
+                        <span style="font-size: 0.75rem; background: #1976D2; padding: 2px 6px; border-radius: 4px;">СБП</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-top" id="scrollTopBtn" aria-label="Наверх">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <div class="callback-widget" id="callbackWidget">
+        <button class="callback-widget__btn" id="callbackBtn" aria-label="Заказать звонок">
+            <i class="fas fa-phone-alt"></i>
+        </button>
+        <div class="callback-widget__form" id="callbackForm">
+            <div class="callback-widget__header">
+                <h4>Заказать звонок</h4>
+                <button class="callback-widget__close" id="closeCallbackBtn" aria-label="Закрыть">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <form id="callbackRequestForm">
+                <div class="form-group">
+                    <input type="text" name="name" class="form-control" placeholder="Ваше имя" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" name="phone" class="form-control" placeholder="+7 (___) ___-__-__" required>
+                </div>
+                <button type="submit" class="btn btn--primary btn--block">Перезвоните мне</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal" id="modal">
+        <div class="modal__overlay" id="modalOverlay"></div>
+        <div class="modal__content" id="modalContent">
+            <button class="modal__close" id="modalClose" aria-label="Закрыть">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal__body" id="modalBody"></div>
+        </div>
+    </div>
+
+    <div class="toast-container" id="toastContainer"></div>
+
+    <a href="#" class="cabinet-fab" id="cabinetBtn" aria-label="Личный кабинет" title="Личный кабинет">
+        <i class="fas fa-user-circle"></i>
+    </a>
+
+    <div class="auth-modal" id="authModal">
+        <div class="auth-modal__overlay" id="authModalOverlay"></div>
+        <div class="auth-modal__content">
+            <button class="auth-modal__close" id="authModalClose" aria-label="Закрыть"><i class="fas fa-times"></i></button>
+            <div class="auth-modal__body" id="authModalBody"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/auth-modal.js"></script>
+    
+    
+    
+    
+    
+    
+</body>
+</html>

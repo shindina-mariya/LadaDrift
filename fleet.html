@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="дрифт, LADA, дрифт обучение, аренда авто дрифт, подарочный сертификат дрифт, автодром">
+    <link rel="icon" type="image/png" href="assets/images/logo/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <title>Автопарк | LADA Drift</title>
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="index.html" class="header__logo">
+                    <img src="assets/images/logo/logo.svg" alt="LADA Drift" class="header__logo-img">
+                </a>
+                <nav class="header__nav" id="mainNav">
+                    <ul class="header__menu">
+                        <li class="header__menu-item"><a href="index.html" class="header__menu-link ">Главная</a></li>
+                        <li class="header__menu-item"><a href="services.html" class="header__menu-link ">Услуги</a></li>
+                        <li class="header__menu-item"><a href="fleet.html" class="header__menu-link ">Автопарк</a></li>
+                        <li class="header__menu-item"><a href="about.html" class="header__menu-link ">О нас</a></li>
+                        <li class="header__menu-item"><a href="contacts.html" class="header__menu-link ">Контакты</a></li>
+                    </ul>
+                </nav>
+                <div class="header__actions">
+                    <a href="tel:+79001234567" class="header__phone"><i class="fas fa-phone"></i><span>+7 (900) 123-45-67</span></a>
+                    <a href="booking.html" class="btn btn--primary header__btn">Забронировать</a>
+                    <button class="header__burger" id="burgerBtn" aria-label="Открыть меню">
+                        <span class="header__burger-line"></span><span class="header__burger-line"></span><span class="header__burger-line"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-menu__overlay" id="mobileOverlay"></div>
+            <div class="mobile-menu__content">
+                <div class="mobile-menu__header">
+                    <a href="index.html" class="mobile-menu__logo">
+                        <img src="assets/images/logo/logo.svg" alt="LADA Drift">
+                    </a>
+                    <button class="mobile-menu__close" id="closeMenuBtn" aria-label="Закрыть меню"><i class="fas fa-times"></i></button>
+                </div>
+                <nav class="mobile-menu__nav">
+                    <ul class="mobile-menu__list">
+                        <li><a href="index.html" class="">Главная</a></li>
+                        <li><a href="services.html" class="">Услуги</a></li>
+                        <li><a href="fleet.html" class="">Автопарк</a></li>
+                        <li><a href="about.html" class="">О нас</a></li>
+                        <li><a href="contacts.html" class="">Контакты</a></li>
+                    </ul>
+                </nav>
+                <div class="mobile-menu__footer">
+                    <a href="tel:+79001234567" class="mobile-menu__phone"><i class="fas fa-phone"></i>+7 (900) 123-45-67</a>
+                    <a href="booking.html" class="btn btn--primary btn--block">Забронировать</a>
+                    <div class="mobile-menu__social">
+                        <a href="https://t.me/ladadrift" target="_blank" rel="noopener" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+                        <a href="https://vk.com/ladadrift" target="_blank" rel="noopener" aria-label="VK"><i class="fab fa-vk"></i></a>
+                        <a href="https://youtube.com/@ladadrift" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero page-hero--bg-fleet">
+            <div class="page-hero__content">
+                <h1 class="page-hero__title">
+                    Наш <span>автопарк</span>
+                </h1>
+                <p class="page-hero__subtitle">
+                    Легендарные автомобили LADA, подготовленные для профессионального дрифта
+                </p>
+            </div>
+        </section>
+        
+        <!-- Фильтры -->
+        <section class="fleet-filters" aria-labelledby="fleet-filters-heading">
+            <h2 id="fleet-filters-heading" class="visually-hidden">Фильтры автомобилей</h2>
+            <div class="container">
+                <div class="fleet-filters__inner">
+                    <button class="filter-btn active" data-filter="all">Все автомобили</button>
+                    <button class="filter-btn" data-filter="classic">Классика</button>
+                    <button class="filter-btn" data-filter="modern">Современные</button>
+                    <button class="filter-btn" data-filter="unique">Уникальные</button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Сетка автомобилей -->
+        <section class="section" aria-labelledby="fleet-grid-heading">
+            <h2 id="fleet-grid-heading" class="visually-hidden">Каталог автомобилей</h2>
+            <div class="container">
+                <div class="fleet-grid" id="fleetGrid">
+                    
+                    <!-- 1. ВАЗ-2105 VFTS - Классика -->
+                    <article class="fleet-card" data-category="classic">
+                        <div class="fleet-card__image">
+                            <img src="assets/images/fleet-card__image.webp" alt="ВАЗ-2105 VFTS">
+                            <span class="fleet-card__badge">Классика</span>
+                            <button class="fleet-card__gallery-btn" data-gallery="classic-2105">
+                                <i class="fas fa-images"></i>
+                            </button>
+                        </div>
+                        <div class="fleet-card__content">
+                            <div class="fleet-card__header">
+                                <div>
+                                    <h2 class="fleet-card__title">ВАЗ-2105 VFTS</h2>
+                                    <span class="fleet-card__year">ПЯТЕРКА-ВЕТЕРАН</span>
+                                </div>
+                                <div class="fleet-card__price">
+                                    <div class="fleet-card__price-value">2 800 ₽</div>
+                                    <div class="fleet-card__price-label">за час</div>
+                                </div>
+                            </div>
+                            
+                            <div class="fleet-card__tabs">
+                                <button class="fleet-card__tab active" data-tab="specs">Характеристики</button>
+                                <button class="fleet-card__tab" data-tab="mods">Доработки</button>
+                            </div>
+                            
+                            <div class="fleet-card__tab-content active" data-content="specs">
+                                <div class="fleet-card__specs">
+                                    <div class="fleet-card__spec">
+                                        <div class="fleet-card__spec-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                        <div>
+                                            <div class="fleet-card__spec-value">160 л.с.</div>
+                                            <div class="fleet-card__spec-label">Мощность</div>
+                                        </div>
+                                    </div>
+                                    <div class="fleet-card__spec">
+                                        <div class="fleet-card__spec-icon"><i class="fas fa-cog"></i></div>
+                                        <div>
+                                            <div class="fleet-card__spec-value">МКПП-5</div>
+                                            <div class="fleet-card__spec-label">Трансмиссия</div>
+                                        </div>
+                                    </div>
+                                    <div class="fleet-card__spec">
+                                        <div class="fleet-card__spec-icon"><i class="fas fa-gas-pump"></i></div>
+                                        <div>
+                                            <div class="fleet-card__spec-value">1.6 л</div>
+                                            <div class="fleet-card__spec-label">Двигатель</div>
+                                        </div>
+                                    </div>
+                                    <div class="fleet-card__spec">
+                                        <div class="fleet-card__spec-icon"><i class="fas fa-road"></i></div>
+                                        <div>
+                                            <div class="fleet-card__spec-value">Задний</div>
+                                            <div class="fleet-card__spec-label">Привод</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="fleet-card__tab-content" data-content="mods">
+                                <ul class="fleet-card__mods">
+                                    <li>Спортивная подвеска</li>
+                                    <li>Каркас безопасности</li>
+                                    <li>Блокировка дифференциала</li>
+                                    <li>Гидравлический ручник</li>
+                                    <li>Ковшеобразные сиденья</li>
+                                    <li>6-точечные ремни</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="fleet-card__actions">
+                                <a href="booking.html?car=1" class="btn btn--primary">
+                                    <i class="fas fa-calendar-check"></i> Забронировать
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- 2. ВАЗ-2107 "СЕМЕРКА-САТАНА" - Классика -->
+                    <article class="fleet-card" data-category="classic">
+                        <div class="fleet-card__image">
+                            <img src="assets/images/fleet-card__image.jpg.webp" alt="ВАЗ-2107">
+                            <span class="fleet-card__badge">Классика</span>
+                            <button class="fleet-card__gallery-btn" data-gallery="classic-2107a">
+                                <i class="fas fa-images"></i>
+                            </button>
+                        </div>
+                        <div class="fleet-card__content">
+                            <div class="fleet-card__header">
+                                <div>
+                                    <h2 class="fleet-card__title">ВАЗ-2107</h2>
+                                    <span class="fleet-card__year">СЕМЕРКА-САТАНА</span>
+                                </div>
+                                <div class="fleet-card__price">
+                                    <div class="fleet-card__price-value">2 500 ₽</div>
+                                    <div class="fleet-card__price-label">за час</div>
+                                </div>
+                            </div>
+                            
+                            <div class="fleet-card__tabs">
+                                <button class="fleet-card__tab active" data-tab="specs">Характеристики</button>
+                                <button class="fleet-card__tab" data-tab="mods">Доработки</button>
+                            </div>
+                            
+                            <div class="fleet-card__tab-content active" data-content="specs">
+                                <div class="fleet-card__specs">
+                                    <div class="fleet-card__spec">
+                                        <div class="fleet-card__spec-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                        <div>
+                                            <div class="fleet-card__spec-value">140 л.с.</div>
+                                            <div class="fleet-card__spec-label">Мощность</div>
+                                        </div>
+                                    </div>
+                                    <div class="fleet-card__spec">
+                                        <div class="fleet-card__spec-icon"><i class="fas fa-cog"></i></div>
+                                        <div>
+                                            <div class="fleet-card__spec-value">МКПП-5</div>
+                                            <div class="fleet-card__spec-label">Трансмиссия</div>
+                                        </div>
+                                    </div>
+                                    <div class="fleet-card__spec">
+                                        <div class="fleet-card__spec-icon"><i class="fas fa-gas-pump"></i></div>
+                                        <div>
+                                            <div class="fleet-card__spec-value">1.7 л</div>
+                                            <div class="fleet-card__spec-label">Двигатель</div>
+                                        </div>
+                                    </div>
+                                    <div class="fleet-card__spec">
+                                        <div class="fleet-card__spec-icon"><i class="fas fa-road"></i></div>
+                                        <div>
+                                            <div class="fleet-card__spec-value">Задний</div>
+                                            <div class="fleet-card__spec-label">Привод</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="fleet-card__tab-content" data-content="mods">
+                                <ul class="fleet-card__mods">
+                                    <li>Турбонаддув</li>
+                                    <li>Спортивный выхлоп</li>
+                                    <li>Регулируемая подвеска</li>
+                                    <li>Гидроручник</li>
+                                    <li>6-точечные ремни</li>
+                                    <li>Быстрая рулевая рейка</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="fleet-card__actions">
+                                <a href="booking.html?car=2" class="btn btn--primary">
+                                    <i class="fas fa-calendar-check"></i> Забронировать
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- 3. LADA Priora - Современные -->
+                    <article class="fleet-card" data-category="modern">
+                        <div class="fleet-card__image">
+                            <img src="assets/images/fleet-card__image.jpg" alt="LADA Priora">
+                            <span class="fleet-card__badge" style="background: var(--color-gray-light);">Современные</span>
+                            <button class="fleet-card__gallery-btn" data-gallery="modern-priora">
+                                <i class="fas fa-images"></i>
+                            </button>
+                        </div>
+                        <div class="fleet-card__content">
+                            <div class="fleet-card__header">
+                                <div>
+                                    <h2 class="fleet-card__title">LADA Priora</h2>
+                                    <span class="fleet-card__year">ПРИОРА-ПРОРЫВ</span>
+                                </div>
+                                <div class="fleet-card__price">
+                                    <div class="fleet-card__price-value">3 200 ₽</div>
+                                    <div class="fleet-card__price-label">за час</div>
+                                </div>
+                            </div>
+                            
+                            <div class="fleet-card__tabs">
+                                <button class="fleet-card__tab active" data-tab="specs">Характеристики</button>
+                                <button class="fleet-card__tab" data-tab="mods">Доработки</button>
+                            </div>
+                            
+                            <div class="fleet-card__tab-content active" data-content="specs">
+                                <div class="fleet-card__specs">
+                                    <div class="fleet-card__spec">
+                                        <div class="fleet-card__spec-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                        <div>
+                                            <div class="fleet-card__spec-value">150 л.с.</div>
+                                            <div class="fleet-card__spec-label">Мощность</div>
+                                        </div>
+                                    </div>
+                                    <div class="fleet-card__spec">
+                                        <div class="fleet-card__spec-icon"><i class="fas fa-cog"></i></div>
+                                        <div>
+                                            <div class="fleet-card__spec-value">МКПП-5</div>
+                                            <div class="fleet-card__spec-label">Трансмиссия</div>
+                                        </div>
+                                    </div>
+                                    <div class="fleet-card__spec">
+                                        <div class="fleet-card__spec-icon"><i class="fas fa-gas-pump"></i></div>
+                                        <div>
+                                            <div class="fleet-card__spec-value">1.6 л</div>
+                                            <div class="fleet-card__spec-label">Двигатель</div>
+                                        </div>
+                                    </div>
+                                    <div class="fleet-card__spec">
+                                        <div class="fleet-card__spec-icon"><i class="fas fa-road"></i></div>
+                                        <div>
+                                            <div class="fleet-card__spec-value">Задний</div>
+                                            <div class="fleet-card__spec-label">Привод</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="fleet-card__tab-content" data-content="mods">
+                                <ul class="fleet-card__mods">
+                                    <li>Турбомотор</li>
+                                    <li>Полный каркас</li>
+                                    <li>Гидроручник</li>
+                                    <li>Сварной дифференциал</li>
+                                    <li>Спортивные амортизаторы</li>
+                                    <li>Полиуретановые сайлентблоки</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="fleet-card__actions">
+                                <a href="booking.html?car=3" class="btn btn--primary">
+                                    <i class="fas fa-calendar-check"></i> Забронировать
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- 4. LADA Granta Sport - Современные -->
+                    <article class="fleet-card" data-category="modern">
+                        <div class="fleet-card__image">
+                            <img src="assets/images/car-card__image.jpg" alt="LADA Granta Sport">
+                            <span class="fleet-card__badge" style="background: var(--color-success);">Современные</span>
+                            <button class="fleet-card__gallery-btn" data-gallery="modern-granta">
+                                <i class="fas fa-images"></i>
+                            </button>
+                        </div>
+                        <div class="fleet-card__content">
+                            <div class="fleet-card__header">
+                                <div>
+                                    <h2 class="fleet-card__title">LADA Granta Sport</h2>
+                                    <span class="fleet-card__year">ГРАНТ-ГРОМОВЕРЖЕЦ</span>
+                                </div>
+                                <div class="fleet-card__price">
+                                    <div class="fleet-card__price-value">3 500 ₽</div>
+                                    <div class="fleet-card__price-label">за час</div>
+                                </div>
+                            </div>
+                            
+                            <div class="fleet-card__tabs">
+                                <button class="fleet-card__tab active" data-tab="specs">Характеристики</button>
+                                <button class="fleet-card__tab" data-tab="mods">Доработки</button>
+                            </div>
+                            
+                            <div class="fleet-card__tab-content active" data-content="specs">
+                                <div class="fleet-card__specs">
+                                    <div class="fleet-card__spec">
+                                        <div class="fleet-card__spec-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                        <div>
+                                            <div class="fleet-card__spec-value">120 л.с.</div>
+                                            <div class="fleet-card__spec-label">Мощность</div>
+                                        </div>
+                                    </div>
+                                    <div class="fleet-card__spec">
+                                        <div class="fleet-card__spec-icon"><i class="fas fa-cog"></i></div>
+                                        <div>
+                                            <div class="fleet-card__spec-value">МКПП-5</div>
+                                            <div class="fleet-card__spec-label">Трансмиссия</div>
+                                        </div>
+                                    </div>
+                                    <div class="fleet-card__spec">
+                                        <div class="fleet-card__spec-icon"><i class="fas fa-gas-pump"></i></div>
+                                        <div>
+                                            <div class="fleet-card__spec-value">1.6 л</div>
+                                            <div class="fleet-card__spec-label">Двигатель</div>
+                                        </div>
+                                    </div>
+                                    <div class="fleet-card__spec">
+                                        <div class="fleet-card__spec-icon"><i class="fas fa-road"></i></div>
+                                        <div>
+                                            <div class="fleet-card__spec-value">Задний</div>
+                                            <div class="fleet-card__spec-label">Привод</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="fleet-card__tab-content" data-content="mods">
+                                <ul class="fleet-card__mods">
+                                    <li>Отключаемый передний мост</li>
+                                    <li>Лифт подвески</li>
+                                    <li>Грязевая резина</li>
+                                    <li>Шноркель</li>
+                                    <li>Защита днища</li>
+                                    <li>Лебёдка</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="fleet-card__actions">
+                                <a href="booking.html?car=4" class="btn btn--primary">
+                                    <i class="fas fa-calendar-check"></i> Забронировать
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- 5. LADA Niva Legend - Уникальные -->
+                    <article class="fleet-card" data-category="unique">
+                        <div class="fleet-card__image">
+                            <img src="assets/images/car-card__image4.jpg" alt="LADA Niva Legend">
+                            <span class="fleet-card__badge" style="background: var(--color-warning);">Уникальные</span>
+                            <button class="fleet-card__gallery-btn" data-gallery="unique-niva">
+                                <i class="fas fa-images"></i>
+                            </button>
+                        </div>
+                        <div class="fleet-card__content">
+                            <div class="fleet-card__header">
+                                <div>
+                                    <h2 class="fleet-card__title">LADA Niva Legend</h2>
+                                    <span class="fleet-card__year">НИВА-НАЕЗДНИК</span>
+                                </div>
+                                <div class="fleet-card__price">
+                                    <div class="fleet-card__price-value">3 800 ₽</div>
+                                    <div class="fleet-card__price-label">за час</div>
+                                </div>
+                            </div>
+                            
+                            <div class="fleet-card__tabs">
+                                <button class="fleet-card__tab active" data-tab="specs">Характеристики</button>
+                                <button class="fleet-card__tab" data-tab="mods">Доработки</button>
+                            </div>
+                            
+                            <div class="fleet-card__tab-content active" data-content="specs">
+                                <div class="fleet-card__specs">
+                                    <div class="fleet-card__spec">
+                                        <div class="fleet-card__spec-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                        <div>
+                                            <div class="fleet-card__spec-value">125 л.с.</div>
+                                            <div class="fleet-card__spec-label">Мощность</div>
+                                        </div>
+                                    </div>
+                                    <div class="fleet-card__spec">
+                                        <div class="fleet-card__spec-icon"><i class="fas fa-cog"></i></div>
+                                        <div>
+                                            <div class="fleet-card__spec-value">МКПП-5</div>
+                                            <div class="fleet-card__spec-label">Трансмиссия</div>
+                                        </div>
+                                    </div>
+                                    <div class="fleet-card__spec">
+                                        <div class="fleet-card__spec-icon"><i class="fas fa-gas-pump"></i></div>
+                                        <div>
+                                            <div class="fleet-card__spec-value">1.7 л</div>
+                                            <div class="fleet-card__spec-label">Двигатель</div>
+                                        </div>
+                                    </div>
+                                    <div class="fleet-card__spec">
+                                        <div class="fleet-card__spec-icon"><i class="fas fa-road"></i></div>
+                                        <div>
+                                            <div class="fleet-card__spec-value">Полный</div>
+                                            <div class="fleet-card__spec-label">Привод</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="fleet-card__tab-content" data-content="mods">
+                                <ul class="fleet-card__mods">
+                                    <li>Отключаемый передний мост</li>
+                                    <li>Лифт подвески</li>
+                                    <li>Грязевая резина</li>
+                                    <li>Шноркель</li>
+                                    <li>Защита днища</li>
+                                    <li>Лебёдка</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="fleet-card__actions">
+                                <a href="booking.html?car=5" class="btn btn--primary">
+                                    <i class="fas fa-calendar-check"></i> Забронировать
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- 6. ВАЗ-2107 "СЕМЕРКА-ШЕРИФ" - Классика -->
+                    <article class="fleet-card" data-category="classic">
+                        <div class="fleet-card__image">
+                            <img src="assets/images/car-card__image3.jpg" alt="ВАЗ-2107">
+                            <span class="fleet-card__badge">Классика</span>
+                            <button class="fleet-card__gallery-btn" data-gallery="classic-2107b">
+                                <i class="fas fa-images"></i>
+                            </button>
+                        </div>
+                        <div class="fleet-card__content">
+                            <div class="fleet-card__header">
+                                <div>
+                                    <h2 class="fleet-card__title">ВАЗ-2107</h2>
+                                    <span class="fleet-card__year">СЕМЕРКА-ШЕРИФ</span>
+                                </div>
+                                <div class="fleet-card__price">
+                                    <div class="fleet-card__price-value">2 700 ₽</div>
+                                    <div class="fleet-card__price-label">за час</div>
+                                </div>
+                            </div>
+                            
+                            <div class="fleet-card__tabs">
+                                <button class="fleet-card__tab active" data-tab="specs">Характеристики</button>
+                                <button class="fleet-card__tab" data-tab="mods">Доработки</button>
+                            </div>
+                            
+                            <div class="fleet-card__tab-content active" data-content="specs">
+                                <div class="fleet-card__specs">
+                                    <div class="fleet-card__spec">
+                                        <div class="fleet-card__spec-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                        <div>
+                                            <div class="fleet-card__spec-value">130 л.с.</div>
+                                            <div class="fleet-card__spec-label">Мощность</div>
+                                        </div>
+                                    </div>
+                                    <div class="fleet-card__spec">
+                                        <div class="fleet-card__spec-icon"><i class="fas fa-cog"></i></div>
+                                        <div>
+                                            <div class="fleet-card__spec-value">МКПП-5</div>
+                                            <div class="fleet-card__spec-label">Трансмиссия</div>
+                                        </div>
+                                    </div>
+                                    <div class="fleet-card__spec">
+                                        <div class="fleet-card__spec-icon"><i class="fas fa-gas-pump"></i></div>
+                                        <div>
+                                            <div class="fleet-card__spec-value">1.6 л</div>
+                                            <div class="fleet-card__spec-label">Двигатель</div>
+                                        </div>
+                                    </div>
+                                    <div class="fleet-card__spec">
+                                        <div class="fleet-card__spec-icon"><i class="fas fa-road"></i></div>
+                                        <div>
+                                            <div class="fleet-card__spec-value">Задний</div>
+                                            <div class="fleet-card__spec-label">Привод</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="fleet-card__tab-content" data-content="mods">
+                                <ul class="fleet-card__mods">
+                                    <li>Облегчённый кузов</li>
+                                    <li>Жёсткая подвеска</li>
+                                    <li>Гидроручник</li>
+                                    <li>Быстрая рулевая рейка</li>
+                                    <li>Спортивные сиденья</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="fleet-card__actions">
+                                <a href="booking.html?car=6" class="btn btn--primary">
+                                    <i class="fas fa-calendar-check"></i> Забронировать
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA секция -->
+        <section class="section section--accent">
+            <div class="container container--center">
+                <h2>Не нашли подходящий автомобиль?</h2>
+                <p>Свяжитесь с нами, и мы поможем подобрать машину под ваш уровень и пожелания</p>
+                <a href="contacts.html" class="btn btn--secondary btn--lg">
+                    <i class="fas fa-phone"></i> Связаться с нами
+                </a>
+            </div>
+        </section>
+
+        <!-- Модальное окно галереи -->
+        <div class="gallery-modal" id="galleryModal">
+            <button class="gallery-modal__close" id="closeGallery">
+                <i class="fas fa-times"></i>
+            </button>
+            <button class="gallery-modal__nav gallery-modal__nav--prev" id="prevImage">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <img class="gallery-modal__image" id="galleryImage" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="">
+            <button class="gallery-modal__nav gallery-modal__nav--next" id="nextImage">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </main>
+    
+    <footer class="footer">
+        <div class="footer__top">
+            <div class="container">
+                <div class="footer__grid">
+                    <div class="footer__col footer__col--about">
+                        <a href="index.html" class="footer__logo">
+                            <img src="assets/images/logo/logo.svg" alt="LADA Drift" width="50" height="50">
+                        </a>
+                        <p class="footer__description">
+                            Профессиональный дрифт на легендарных автомобилях LADA.
+                            Аренда авто, обучение, корпоративные мероприятия и подарочные сертификаты.
+                        </p>
+                        <div class="footer__social">
+                            <a href="https://t.me/ladadrift" target="_blank" rel="noopener" class="footer__social-link" aria-label="Telegram">
+                                <i class="fab fa-telegram"></i>
+                            </a>
+                            <a href="https://vk.com/ladadrift" target="_blank" rel="noopener" class="footer__social-link" aria-label="VK">
+                                <i class="fab fa-vk"></i>
+                            </a>
+                            <a href="https://youtube.com/@ladadrift" target="_blank" rel="noopener" class="footer__social-link" aria-label="YouTube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="https://instagram.com/ladadrift" target="_blank" rel="noopener" class="footer__social-link" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="footer__col">
+                        <h3 class="footer__title">Навигация</h3>
+                        <ul class="footer__menu">
+                            <li><a href="index.html">Главная</a></li>
+                            <li><a href="services.html">Услуги</a></li>
+                            <li><a href="fleet.html">Автопарк</a></li>
+                            <li><a href="about.html">О компании</a></li>
+                            <li><a href="contacts.html">Контакты</a></li>
+                            <li><a href="booking.html">Бронирование</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__col">
+                        <h3 class="footer__title">Услуги</h3>
+                        <ul class="footer__menu">
+                            <li><a href="services.html#car-rental">Аренда авто</a></li>
+                            <li><a href="services.html#track-rental">Аренда трека</a></li>
+                            <li><a href="services.html#training">Обучение дрифту</a></li>
+                            <li><a href="services.html#certificate">Подарочные сертификаты</a></li>
+                            <li><a href="services.html#corporate">Корпоративы</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__col">
+                        <h3 class="footer__title">Контакты</h3>
+                        <ul class="footer__contacts">
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Московская обл., г. Дмитров,<br>ул. Промышленная, 15</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                <a href="tel:+79001234567">+7 (900) 123-45-67</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:info@ladadrift.ru">info@ladadrift.ru</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-clock"></i>
+                                <span>Пн-Вс: 10:00 - 21:00</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__col footer__col--subscribe">
+                        <h3 class="footer__title">Подпишитесь на новости</h3>
+                        <p class="footer__subscribe-text">
+                            Получайте информацию об акциях и специальных предложениях
+                        </p>
+                        <form class="footer__subscribe-form" id="subscribeForm">
+                            <div class="footer__subscribe-input">
+                                <input type="email" name="email" placeholder="Ваш email" required autocomplete="email">
+                                <button type="submit" aria-label="Подписаться">
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </div>
+                            <p class="footer__subscribe-note">
+                                Нажимая кнопку, вы соглашаетесь с
+                                <a href="pages/privacy.html">политикой конфиденциальности</a>
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer__map">
+            <div class="footer__map-container" id="footerMap">
+                <iframe
+                    src="https://yandex.ru/map-widget/v1/?um=constructor%3A2f8e9d3b7c4a5f1e0d9c8b7a6f5e4d3c&amp;source=constructor"
+                    style="width:100%; height:300px; border:none;"
+                    loading="lazy"
+                    title="Карта проезда к LADA Drift"
+                ></iframe>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <div class="container">
+                <div class="footer__bottom-inner">
+                    <p class="footer__copyright">
+                        &copy;  LADA Drift. Все права защищены.
+                    </p>
+                    <div class="footer__links">
+                        <a href="pages/privacy.html">Политика конфиденциальности</a>
+                        <a href="pages/terms.html">Пользовательское соглашение</a>
+                        <a href="pages/oferta.html">Публичная оферта</a>
+                    </div>
+                    <div class="footer__payment">
+                        <span>Принимаем к оплате:</span>
+                        <i class="fab fa-cc-visa" style="font-size: 1.5rem;"></i>
+                        <i class="fab fa-cc-mastercard" style="font-size: 1.5rem;"></i>
+                        <span style="font-size: 0.75rem; background: #4CAF50; padding: 2px 6px; border-radius: 4px;">МИР</span>
+                        <span style="font-size: 0.75rem; background: #1976D2; padding: 2px 6px; border-radius: 4px;">СБП</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-top" id="scrollTopBtn" aria-label="Наверх">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <div class="callback-widget" id="callbackWidget">
+        <button class="callback-widget__btn" id="callbackBtn" aria-label="Заказать звонок">
+            <i class="fas fa-phone-alt"></i>
+        </button>
+        <div class="callback-widget__form" id="callbackForm">
+            <div class="callback-widget__header">
+                <h4>Заказать звонок</h4>
+                <button class="callback-widget__close" id="closeCallbackBtn" aria-label="Закрыть">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <form id="callbackRequestForm">
+                <div class="form-group">
+                    <input type="text" name="name" class="form-control" placeholder="Ваше имя" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" name="phone" class="form-control" placeholder="+7 (___) ___-__-__" required>
+                </div>
+                <button type="submit" class="btn btn--primary btn--block">Перезвоните мне</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal" id="modal">
+        <div class="modal__overlay" id="modalOverlay"></div>
+        <div class="modal__content" id="modalContent">
+            <button class="modal__close" id="modalClose" aria-label="Закрыть">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal__body" id="modalBody"></div>
+        </div>
+    </div>
+
+    <div class="toast-container" id="toastContainer"></div>
+
+    <a href="#" class="cabinet-fab" id="cabinetBtn" aria-label="Личный кабинет" title="Личный кабинет">
+        <i class="fas fa-user-circle"></i>
+    </a>
+
+    <div class="auth-modal" id="authModal">
+        <div class="auth-modal__overlay" id="authModalOverlay"></div>
+        <div class="auth-modal__content">
+            <button class="auth-modal__close" id="authModalClose" aria-label="Закрыть"><i class="fas fa-times"></i></button>
+            <div class="auth-modal__body" id="authModalBody"></div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/auth-modal.js"></script>
+    
+    
+    
+    
+    <script src="js/gallery.js"></script>
+    
+</body>
+</html>
